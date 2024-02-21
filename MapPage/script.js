@@ -1,0 +1,78 @@
+const map = L.map('map').setView([20.5937, 78.9629], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+
+const cybercrimeData = [
+    { location: [28.6139, 77.2090], description: "Phishing attack reported" },
+    { location: [18.5204, 73.8567], description: "Data breach incident" },
+    { location: [28.6139, 77.2090], description: "Phishing attack reported" },
+    { location: [18.5204, 73.8567], description: "Data breach incident" },
+    { location: [12.9716, 77.5946], description: "Ransomware attack detected" },
+    { location: [22.5726, 88.3639], description: "Identity theft reported" },
+    { location: [13.0827, 80.2707], description: "Online fraud case registered" },
+    { location: [26.9124, 75.7873], description: "Social engineering scam reported" },
+    { location: [19.0760, 72.8777], description: "Malware infection detected" },
+    { location: [28.7041, 77.1025], description: "Cyberbullying incident reported" },
+    { location: [17.3850, 78.4867], description: "Unauthorized access detected" },
+    { location: [23.2599, 77.4126], description: "Online harassment case registered" },
+    { location: [22.5726, 88.3639], description: "Credit card fraud reported" },
+    { location: [19.9975, 73.7898], description: "Email account compromise detected" },
+    { location: [12.9716, 77.5946], description: "Cyberstalking incident reported" },
+    { location: [26.8467, 80.9462], description: "Pharming attack detected" },
+    { location: [28.7041, 77.1025], description: "Denial of Service (DoS) attack reported" },
+    { location: [18.5204, 73.8567], description: "Payment gateway breach incident" },
+    { location: [22.5726, 88.3639], description: "Social media account hijacking reported" },
+    { location: [20.2961, 85.8245], description: "Online extortion case registered" },
+    { location: [19.0760, 72.8777], description: "Phishing scam detected" },
+    { location: [23.2599, 77.4126], description: "Website defacement incident" },
+    { location: [12.9716, 77.5946], description: "Cryptojacking attack detected" },
+    { location: [28.6139, 77.2090], description: "Insider threat reported" },
+    { location: [26.8467, 80.9462], description: "Spoofing attack detected" },
+    { location: [22.5726, 88.3639], description: "Phishing email campaign reported" },
+    { location: [17.3850, 78.4867], description: "Data leakage incident" },
+    { location: [13.0827, 80.2707], description: "Online romance scam detected" },
+    { location: [28.7041, 77.1025], description: "Brute force attack reported" },
+    { location: [19.0760, 72.8777], description: "E-commerce website breach incident" },
+    { location: [23.2599, 77.4126], description: "Mobile app vulnerability exploited" },
+    { location: [12.9716, 77.5946], description: "Social media phishing scam reported" },
+    { location: [28.7041, 77.1025], description: "Malicious software download reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Phishing website detected near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Internet banking fraud reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Online harassment incident near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Tech support scam reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Social media impersonation incident near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Online dating scam detected near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Cyber extortion case registered near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Mobile malware infection detected near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Phishing text message reported near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Fake investment scheme detected near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Fake investment scheme detected near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Data interception incident near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Online lottery scam reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Password theft incident near New Delhi" },
+    { location: [28.7041, 77.1025], description: "E-commerce fraud case registered near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Online gaming fraud reported near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Malicious email attachment detected near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Online travel booking fraud reported near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Phishing phone call reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Mobile payment fraud case registered near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Fake social media giveaway scam reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "SMS phishing attack detected near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Online job scam reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Crypto scam detected near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Online blackmail case registered near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Identity fraud incident near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Fake antivirus software scam reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Online shopping fraud detected near New Delhi" },
+    { location: [28.7041, 77.1025], description: "Voice phishing attack reported near New Delhi" },
+    { location: [28.6139, 77.2090], description: "Online ticketing fraud case registered near New Delhi" },
+
+];
+
+cybercrimeData.forEach((incident) => {
+    L.marker(incident.location)
+        .addTo(map)
+        .bindPopup(incident.description);
+});

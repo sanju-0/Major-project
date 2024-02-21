@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Cybercrime Incidents Map in India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/564x/02/1f/34/021f34fb8775f5173a62c82933bba07f.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        h1 {
+            text-align: center; 
+            margin-top: 40px;
+        }
+
+        #map {
+            height: 400px;
+            float: right; 
+            width: calc(100% - 500px); 
+            margin-top: 40px; 
+            border-radius: 10px; 
+            overflow: hidden; 
+        }
+
+        #text-container {
+            float: left;
+            width: 400px; 
+            padding: 20px; 
+            margin-top: 60px;
+            margin-left: 30px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px; 
+        }
+
+        #text-container p {
+            line-height: 1.6; 
+        }
+    </style> 
+</head>
+<body>
+    <h1>Cybercrime Incidents Map </h1>
+    <div id="text-container">
+        <p>
+            The frequency of user interactions with the map provides insights into user engagement, while identifying regions most affected by cyber attacks aids in prioritizing cybersecurity efforts. Analyzing patterns and trends offers intelligence to anticipate and mitigate emerging threats, contributing to a more resilient digital ecosystem.
+            <br>
+            <br>
+            Click On The Area - You show the Attacks details.
+        </p>
+    </div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
